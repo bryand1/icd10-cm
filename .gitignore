@@ -3,6 +3,7 @@ __pycache__
 venv
 build
 dist
+*.egg-info
 2019-ICD-10-CM-Code-Descriptions
 .*
 !.gitignore
