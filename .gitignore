@@ -1,0 +1,8 @@
+*.py[oc]
+__pycache__
+venv
+build
+dist
+2019-ICD-10-CM-Code-Descriptions
+.*
+!.gitignore
