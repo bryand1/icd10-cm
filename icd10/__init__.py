@@ -104,7 +104,7 @@ def exists(s: str) -> bool:
     """
     if not s:
         return False
-    return codes.get(s.replace('.', ''), False)
+    return bool(codes.get(s.replace('.', ''), False))
 
 
 def find(s: str) -> Optional[ICD10]:
