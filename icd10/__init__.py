@@ -84,7 +84,7 @@ class ICD10:
         return "<ICD10: %s>" % self
 
     def __hash__(self):
-        return self.code
+        return hash(self.code)
 
     def _find_chapter(self):
         for chapter, block, description in chapters:
