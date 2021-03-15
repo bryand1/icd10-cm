@@ -23,7 +23,7 @@ chapters = [
     ('IV', 'E00-E90', 'Endocrine, nutritional and metabolic diseases'),
     ('V', 'F00-F99', 'Mental and behavioural disorders'),
     ('VI', 'G00-G99', 'Diseases of the nervous system'),
-    ('VII', 'H00-H59', 'Diseases of the eye and adnexia'),
+    ('VII', 'H00-H59', 'Diseases of the eye and adnexa'),
     ('VIII', 'H60-H95', 'Diseases of the ear and mastoid process'),
     ('IX', 'I00-I99', 'Diseases of the circulatory system'),
     ('X', 'J00-J99', 'Diseases of the respiratory system'),
