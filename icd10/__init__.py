@@ -37,12 +37,13 @@ chapters = [
     ('XVIII', 'R00-R99', 'Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified'),
     ('XIX', 'S00-T98', 'Injury, poisoning and certain other consequences of external causes'),
     ('XX', 'V01-Y98', 'External causes of morbidity and mortality'),
-    ('XXI','Z00-Z99','Factors influencing health status and contact with health services'),
+    ('XXI', 'Z00-Z99', 'Factors influencing health status and contact with health services'),
     ('XXII', 'U00-U99', 'Codes for special purposes'),
 ]
 
 
 class ICD10:
+
     def __init__(self, code: str, billable: bool, description: str):
         self.code = code
         self.billable = billable
