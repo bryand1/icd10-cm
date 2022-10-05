@@ -19,7 +19,7 @@ with gzip.open(os.path.join(here, 'icd10.json.gz')) as fh:
 chapters = [
     ('I', 'A00-B99', 'Certain infectious and parasitic diseases'),
     ('II', 'C00-D48', 'Neoplasms'),
-    ('III','D50-D89','Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism'),
+    ('III', 'D50-D89', 'Diseases of the blood and blood-forming organs and certain disorders involving the immune mechanism'),
     ('IV', 'E00-E90', 'Endocrine, nutritional and metabolic diseases'),
     ('V', 'F00-F99', 'Mental and behavioural disorders'),
     ('VI', 'G00-G99', 'Diseases of the nervous system'),
@@ -33,9 +33,9 @@ chapters = [
     ('XIV', 'N00-N99', 'Diseases of the genitourinary system'),
     ('XV', 'O00-O99', 'Pregnancy, childbirth and the puerperium'),
     ('XVI', 'P00-P96', 'Certain conditions originating in the perinatal period'),
-    ('XVII','Q00-Q99','Congenital malformations, deformations and chromosomal abnormalities'),
-    ('XVIII','R00-R99','Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified'),
-    ('XIX','S00-T98','Injury, poisoning and certain other consequences of external causes'),
+    ('XVII', 'Q00-Q99', 'Congenital malformations, deformations and chromosomal abnormalities'),
+    ('XVIII', 'R00-R99', 'Symptoms, signs and abnormal clinical and laboratory findings, not elsewhere classified'),
+    ('XIX', 'S00-T98', 'Injury, poisoning and certain other consequences of external causes'),
     ('XX', 'V01-Y98', 'External causes of morbidity and mortality'),
     ('XXI','Z00-Z99','Factors influencing health status and contact with health services'),
     ('XXII', 'U00-U99', 'Codes for special purposes'),
@@ -80,7 +80,7 @@ class ICD10:
             return self.code
 
     def __repr__(self):
-        return '<ICD10: %s>' % self
+        return "<ICD10: %s>" % self
 
     def __hash__(self):
         return hash(self.code)
@@ -96,9 +96,9 @@ class ICD10:
 
 def exists(s: str) -> bool:
     """
-    >>> exists('T50.B')
+    >>> exists("T50.B")
     True
-    >>> exists('A99.8')
+    >>> exists("A99.8")
     False
     """
     if not s:
@@ -108,7 +108,7 @@ def exists(s: str) -> bool:
 
 def find(s: str) -> Optional[ICD10]:
     """
-    >>> find('A02.1')
+    >>> find("A02.1")
     <ICD10: A02.1>
     """
     if not s:

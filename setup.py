@@ -9,7 +9,7 @@ import os
 import sys
 from shutil import rmtree
 
-from setuptools import Command, setup
+from setuptools import setup, Command
 
 NAME = 'icd10-cm'
 PACKAGE = 'icd10'
