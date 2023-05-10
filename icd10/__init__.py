@@ -130,7 +130,7 @@ def in_chapter(block: str, icd10: str) -> bool:
     if salpha != ealpha:
         enumeric += 100
         
-    if alpha == ealpha:
+    if alpha != salpha and alpha == ealpha:
         numeric += 100
     
     return salpha <= alpha <= ealpha and snumeric <= numeric <= enumeric
