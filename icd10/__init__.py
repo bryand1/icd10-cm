@@ -123,8 +123,14 @@ def find(s: str) -> Optional[ICD10]:
 
 
 def in_chapter(block: str, icd10: str) -> bool:
-    alpha, numeric = ord(icd10[0]), int(icd10[1:3].lstrip('0'))
+    alpha, numeric = ord(icd10[0]), int(icd10[1:3].lstrip('0') or 0)
     sblock, eblock = block.split('-')  # A00-B99
     salpha, snumeric = ord(sblock[0]), int(sblock[1:].lstrip('0') or 0)
     ealpha, enumeric = ord(eblock[0]), int(eblock[1:].lstrip('0') or 0)
+    if salpha != ealpha:
+        enumeric += 100
+        
+    if alpha != salpha and alpha == ealpha:
+        numeric += 100
+    
     return salpha <= alpha <= ealpha and snumeric <= numeric <= enumeric
